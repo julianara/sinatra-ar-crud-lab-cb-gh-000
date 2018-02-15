@@ -40,7 +40,11 @@ class ApplicationController < Sinatra::Base
     @post = Post.find_by_id(params[:id])
     @post.update(name: params[:name], content: params[:content])
     
+<<<<<<< HEAD
     erb :show
+=======
+    redirect to '/posts/#{post.id}'
+>>>>>>> 5b40d7d3a3bbe25721042e24ccc603d51eae3091
   end
   
   delete '/posts/:id/delete' do 
